@@ -1,0 +1,682 @@
+* {
+  box-sizing: border-box;
+}
+
+/* la the html */
+:root {
+  --primary-color: #0f1b4c;
+}
+
+/* su dung font chu voi don vi rem */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Common */
+a {
+  text-decoration: none;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /*-webkit-line-clamp: 2;    Dùng biến tại đây */
+  /* var(--line-clamp, giá trị mặc định */
+  -webkit-line-clamp: var(--line-clamp, 2);
+  overflow: hidden;
+}
+
+.btn {
+  /* The a la inline la ta can chuyen thanh inline block de su dung width */
+  display: inline-block;
+  /* width: 90px;  nen dung min-width vi phan btn nay khong phai luc cung chi co 2 tu*/
+  min-width: 98px;
+  /* height:40px;  - dung padding se tien hon*/
+  border-radius: 12px;
+  background: var(--primary-color);
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #fff;
+  padding: 18px 16px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* nhin chung bo cuc se dan deu hai ben va co chieu rong la 1110px nen se viet chung */
+.content {
+  /* Neu web nho hon 1110 thi se xuat hien thanh cuon vi khong du dien tich de hien thi het navbar */
+  width: 1110px;
+  /* giu do rong toi da luon la 100% theo do rong trinh duyet - 48px cach deu moi ben 24px*/
+  max-width: calc(100% - 48px);
+  /* margin: auto; ca tren duoi trai phai deu la auto - o cac phan khac co khi van dung margin-top and bottom kieu khac nen khong dyung chung  */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===================HEADER=================== */
+.header {
+  position: relative;
+  background-color: #e6f0ff;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  /* margin-top: 38px; xay ra hien tuong margin collapse - dung margin-top => dung padding*/
+  padding-top: 38px;
+}
+
+.navbar ul {
+  display: flex;
+  margin-left: 50px;
+}
+
+.navbar .actions {
+  margin-left: auto;
+}
+
+.navbar ul a {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #4f5361;
+  /* The a la the inline nen padding van co tac dung nhung khong va cham voi cac phan tu khac */
+  /* va padding o day cung chi can dung de tang vung bam, de hien thi ra menu cap 2 nen khong can va cham */
+  padding: 8px 14px;
+}
+
+.navbar ul a:hover {
+  text-decoration: underline;
+}
+
+.navbar .action-link {
+  font-weight: 500p;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.navbar .action-btn {
+  padding: 13px 16px;
+  margin-left: 18px;
+  border-radius: 8px;
+}
+
+/* hero image and hero content */
+
+.hero {
+  margin-top: 130px;
+}
+
+/* theo thiet ke, width cua phan infor la 559px nhung ta khong dung gia tri tuyet doi o day*/
+/* ma phan nay nam trong content voi width: 1110px vi vay ta lay 559 :1110 de ra ti le*/
+.hero .info {
+  width: 51%;
+}
+
+.hero .sub-titile {
+  font-weight: 500;
+  font-size: 1.8rem;
+  /* line-height luon ti le voi font-size => chuyen ve cung don vi rem */
+  /* khong dung don vi tuyet doi. 27 : 18 */
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: #687691;
+}
+
+.hero .title {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 6.2rem;
+  line-height: 1.19;
+  /* or 119% <=> 1.19 */
+  color: #000336;
+}
+
+.hero .desc {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.78;
+  /* or 178% */
+  /* text-transform: capitalize;  - viet hoa chu cai dau*/
+  color: #5a6473;
+}
+
+.hero-cta {
+  min-width: 170px;
+  margin-top: 40px;
+}
+
+.hero-img {
+  position: absolute;
+  right: calc((100vw - 1110px) / 2 - 100px);
+  bottom: 0;
+}
+
+/* ================Client================ */
+.clients {
+  margin-top: 79px;
+  padding: 43px 0 64px;
+  /* padding 3 gia tri se la : tren trai/phai duoi */
+}
+
+.clients .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients .row-desc {
+  margin-top: 23px;
+}
+
+.clients .desc {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  /*identical to box height or 125% */
+  color: #7d8589;
+}
+
+.clients .images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 96px;
+}
+
+/* ================ Guides ================ */
+.guides {
+  margin-top: 40px;
+  padding: 93px 0 79px;
+  /* padding 3 gia tri se la : tren trai/phai duoi */
+}
+
+.guides .sub-title {
+  position: relative;
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1;
+  /* or 100% */
+  text-align: center;
+  color: #000339;
+}
+
+.guides .sub-title::before {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  /* chay nguoc lai chieu ngang bang mot nua kich thuoc cua no */
+  transform: translateX(-50%);
+  /* luon luon phai co content du khong ghi gi */
+  content: "";
+  display: inline-block; /* de dat kich thuoc cho phan tu */
+  width: 41px;
+  height: 4px;
+  background: #000339;
+  border-radius: 12px;
+}
+
+.guides .desc {
+  width: 459px;
+  max-width: 100%;
+  margin: 20px auto 0;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  /* or 188% */
+  text-align: center;
+  color: #5a6473;
+}
+
+.guides ul {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.guides-item {
+  margin: 0 70px;
+  text-align: center;
+}
+
+.guides-item .title {
+  margin-top: 26px;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.1;
+  /* identical to box height, or 110% */
+  color: #3b3c45;
+}
+
+.guides-item .link {
+  /* vi the a la the inline nen khong nhan margin-top => inline-block */
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #0689ff;
+}
+
+.guides-item .arrow {
+  margin-left: 6px;
+}
+
+.guide-cta {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.guide-cta .btn {
+  min-width: 170px;
+}
+
+/* ================ Featured ================ */
+.featured {
+  margin-top: 41px;
+  background: #f5fafe;
+  padding: 110px 0;
+}
+
+.featured .sub-title {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1;
+  /*identical to box height, or 100%  */
+  color: #000339;
+}
+
+.featured .row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.featured .desc {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  /* or 188% */
+  color: #5a6473;
+}
+
+.featured .link {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #0689ff;
+}
+
+.featured .arrow {
+  margin-left: 8px;
+}
+
+.featured .list {
+  display: flex;
+  gap: 30px;
+  margin-top: 70px;
+}
+
+/* Mỗi phần tử con .item trong .featured .list */
+/* sẽ giãn ra đều nhau */
+/* chia đều không gian còn lại trong hàng. */
+/* flex-grow: 1 ; flex-shrink: 1; flex-basis: 0%; */
+.featured .item {
+  flex: 1; /* chia deu khoang cach cho tung phan tu */
+  background: #fff;
+  border-radius: 12px;
+  /* overflow: hidden; - neu khong bo lai lan nua o .item . thumb thi se bi choi ra khoi the cha */
+  /* ma neu dung overflow hidden thi sau nay neu ta muon hover de hien thi ra them thong tin  */
+  /* hay gi do thi cung se bi an boi thuoc tinh overflow: hidden */
+}
+
+.featured .item .thumb {
+  width: 100%;
+  height: 227px;
+  object-fit: cover; /* giu dung ti le anh va lap day khung hinh */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.featured .item .body {
+  /* tren trai,phai duoi */
+  padding: 17px 20px 24px;
+}
+
+.featured .item .title a {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #000339;
+}
+
+.featured .item .desc {
+  margin-top: 11px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #a3a6ab;
+  /* Dung word-break de phong khi nguoi dung viet mot tu hay dan mot duong link */
+  /* qua dai, khong tu xuong dong lam width bi dai ra gay hong giao dien,  */
+  /* gia tri break-all tu xuong dong */
+  word-break: break-all;
+}
+
+.featured .item .info {
+  margin-top: 21px;
+  display: flex;
+  align-items: center;
+}
+
+.featured .item .icon {
+  margin-left: 23px;
+}
+
+.featured .item .icon:first-child {
+  margin-left: 0;
+}
+
+.featured .item .label {
+  /* mac du span voi class label la the inline nhung  */
+  /* inline chi khong hoat dong voi width height va tren duoi thoi con left and right van hoat dong */
+  margin-left: 8px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 0.01em;
+  color: #4d4d52;
+}
+
+/* ================ Stats ================ */
+.stats {
+  margin-top: 75px;
+  padding: 50px 0;
+}
+
+.stats .content {
+  width: 1048px;
+}
+
+.stats .row {
+  display: flex;
+}
+
+.stats .img-block,
+.stats .info {
+  width: 50%;
+}
+
+.stats .img-block {
+  position: relative;
+}
+
+.status-trend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 239px;
+  border-radius: 0px 0px 12px 12px;
+  padding: 45px 22px 40px;
+  background-color: #fff;
+}
+
+.status-trend .value {
+  font-weight: 700;
+  font-size: 2.6rem;
+  letter-spacing: 0.01em;
+  color: #000339;
+}
+
+.status-trend .separate {
+  margin-top: 25px;
+  height: 1.2px;
+  background: #e9e9e9;
+}
+
+.stats .avatar-block {
+  margin-top: 26px;
+  /* dang tren mot hang, ta muon no xuong hang dung flex-wrap */
+  flex-wrap: wrap;
+  gap: 16px 14px;
+  display: flex;
+}
+
+.stats .avatar-group {
+  display: flex;
+}
+
+.stats .avatar {
+  width: 16px;
+  height: 16px;
+  margin-left: -3px;
+  /* la avatar thi ta luon dung object-fit: cover de toi uu hoa hien thi - vua lap day khung hinh, vua khong meo anh */
+  object-fit: cover;
+  border-radius: 50%;
+  background: var(--bg-color, #fff);
+  font-weight: 450;
+  font-size: 0.7rem;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.stats .avatar:first-child {
+  margin-left: 0;
+}
+
+.status-trend .desc {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5;
+
+  color: #a7a7a7;
+}
+
+/* row da co display flex roi nen co the dung duoc margin. */
+.status-trend .icon {
+  margin-left: auto;
+}
+
+.stats .info {
+  /* top right bottom left */
+  padding: 79px 0 0 165px;
+}
+
+.stats .img-block .image {
+  display: block;
+  /* margin-left khong hoat dong voi the inline */
+  margin-left: auto;
+  width: 400px;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.stats .sub-title {
+  position: relative;
+  width: 269px;
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1.29;
+  color: #000339;
+}
+
+/* vi dung before nen co the se bi va cham voi chu xung quanh nen xu ly bang position hon*/
+.stats .sub-title::before {
+  /* roi khoi flow layout roi thi ko lo bi va cham nua */
+  position: absolute;
+  top: -10px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 41px;
+  height: 4px;
+  background: #000339;
+  border-radius: 12px;
+}
+
+.stats .info .desc {
+  width: 309px;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  color: #5a6473;
+}
+
+.stats .row-qty {
+  justify-content: space-between;
+  margin-top: 110px;
+  padding: 0 32px;
+}
+
+.stats .qty {
+  font-weight: 600;
+  font-size: 6.4rem;
+  color: #000;
+}
+
+.stats .qty-desc {
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #7b8087;
+}
+
+/* ================ Subscription ================ */
+.subscription {
+  margin-top: 90px;
+}
+
+.subscription .body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 370px;
+  background: #063183;
+  border-radius: 20px;
+}
+
+.subscription .info {
+  /* Neu phan desc va phan sub-title vuot qua so dong se van hien thi tot trong do rong co dinh va khong lan sang phan anh */
+  width: 671px;
+  max-width: 100%;
+  padding: 0 80px;
+}
+
+.subscription .sub-title {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.subscription .desc {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 1.6;
+  line-height: 1.88;
+  color: #fff;
+  opacity: 0.75;
+}
+
+.subscription .btn {
+  margin-top: 20px;
+  min-width: 151px;
+  background: #fff;
+  color: #002366;
+}
+
+.subscription .image {
+  position: absolute;
+  bottom: 0;
+  right: 221px;
+}
+
+/* ================ Footer ================ */
+.footer {
+  margin-top: 55px;
+  padding: 50px 0 58px;
+}
+
+.footer .row {
+  display: flex;
+}
+
+.footer .row-top {
+  gap: 185px;
+}
+
+.footer .heading {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #1c1c1d;
+}
+
+.footer .list,
+.footer .desc {
+  margin-top: 42px;
+}
+
+/* phan tu item dau tien se khong bi cong don margin-top vao vi day la hien tuong collapse. margin-top cua the cha List da co la 42px lon hon 18px nen se lay mt42 */
+.footer .item {
+  margin-top: 18px;
+}
+
+.footer .item a,
+.footer .desc {
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #7a7a7e;
+  white-space: nowrap;
+}
+
+.footer .desc {
+  white-space: normal;
+  line-height: 1.75;
+}
+
+/* => Cách xử lý dùng display: flex cho thẻ cha để làm mất các khoảng trắng nhỏ đó.
+Dùng để đặt được width height và căn chỉnh được chính xác hơn.
+ */
+.footer .social {
+  margin-top: 40px;
+  display: flex;
+}
+
+.footer .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 12px;
+}
+
+.footer .social-link:hover {
+  background: #ebebeb;
+}
+
+.footer .row-bottom {
+  margin-top: 81px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer .copyright {
+  font-weight: 400;
+  font-size: 1.4remm;
+  color: #c2c2c2;
+}
