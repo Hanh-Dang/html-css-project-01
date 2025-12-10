@@ -675,6 +675,12 @@ Dùng để đặt được width height và căn chỉnh được chính xác h
   width: 28px;
   height: 28px;
   border-radius: 12px;
+  background-color: #f9f9f9;
+}
+
+/* mot cai social link dung sau mot cai social link nam trong footer se bi tac dong */
+.footer .social-link + .social-link {
+  margin-left: 16px;
 }
 
 .footer .social-link:hover {
