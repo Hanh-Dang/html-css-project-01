@@ -82,6 +82,7 @@ a {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: #e6f0ff;
   height: calc(100vh - 90px);
 }
@@ -128,19 +129,13 @@ a {
   border-radius: 8px;
 }
 
-/* hero image and hero content */
-
-.hero {
-  margin-top: 130px;
-}
-
 /* theo thiet ke, width cua phan infor la 559px nhung ta khong dung gia tri tuyet doi o day*/
 /* ma phan nay nam trong content voi width: 1110px vi vay ta lay 559 :1110 de ra ti le*/
-.hero .info {
+.hero-wrap .info {
   width: 51%;
 }
 
-.hero .sub-titile {
+.hero-wrap .sub-titile {
   font-weight: 500;
   font-size: 1.8rem;
   /* line-height luon ti le voi font-size => chuyen ve cung don vi rem */
@@ -150,7 +145,7 @@ a {
   color: #687690;
 }
 
-.hero .title {
+.hero-wrap .title {
   margin-top: 8px;
   font-weight: 700;
   font-size: 6.2rem;
@@ -159,7 +154,7 @@ a {
   color: #000336;
 }
 
-.hero .desc {
+.hero-wrap .desc {
   margin-top: 30px;
   font-weight: 400;
   font-size: 1.8rem;
